@@ -1,0 +1,37 @@
+<div>
+  {{#with web/languages}}
+  <main>
+    <section>
+      <ol>
+        {{#each this}}
+          <li>
+            
+            {{> title data=name big=true}}
+            <div>Version: <b> {{version}}</b></div>
+            <div>Description: <q>{{description}}</q></div>
+
+            <ul>
+              <li>
+                {{#if this.elements}}
+                  {{> elements data=elements}}
+                {{else}}
+
+                  {{#if this.properties}}
+                    {{> elements data=properties}}
+                  {{else}}
+
+                    {{#if this.functions}}
+                      {{> elements data=functions}}
+                    {{/if}}
+
+                  {{/if}}
+                  
+                {{/if}}
+              </li>
+            </ul>
+          </li>
+        {{/each}}
+      </ol>     
+    </main>
+    {{/with}}
+</div>
