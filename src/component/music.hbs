@@ -1,0 +1,26 @@
+{{#with data}}
+  <br />
+  {{#with venue}}
+    <div>Name: <b>{{name}} </b> </div>
+
+    {{> location data=location}}
+  {{/with}}
+
+  <br />
+  <div>
+    {{#with performers}}
+      <u> Performers:</u>
+      {{#each this}}
+        <ul>
+          <li>
+            {{#with this}}
+              <div> Performer name: <b> {{name}}</b></div>
+              <div> Performer type: <b>{{type}} </b> </div>
+            {{/with}}
+            <br>
+          </li>
+        </ul>
+      {{/each}}
+    {{/with}}
+  </div>
+{{/with}}
