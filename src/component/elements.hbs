@@ -1,0 +1,31 @@
+{{#each data}}
+  {{> element name=this.name descr=this.description}}
+
+  <ul>
+    {{#if this/attributes}}
+
+      {{#each this/attributes}}
+        <li>{{> element name=this.name descr=this.description}}</li>
+      {{/each}}
+
+    {{else}}
+
+      {{#if this/values}}
+        {{#each this/values}}
+          {{> element name=this.value descr=this.description}}
+        {{/each}}
+
+      {{else}}
+
+        {{#if this/parameters}}
+          {{#each this/parameters}}
+            {{> element name=this.name descr=this.description type=this.type}}
+          {{/each}}
+        {{/if}}
+
+      {{/if}}
+
+    {{/if}}
+  </ul>  
+{{/each}}
+
