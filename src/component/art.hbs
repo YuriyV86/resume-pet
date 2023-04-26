@@ -1,0 +1,27 @@
+{{#with data}}
+  <br />
+  <div>Museum name: <b>{{name}} </b> </div>
+
+  {{> location data=location}}
+
+  <br />
+  <div>
+    <u> Exhibits:</u>
+    {{#each exhibits}}
+      <ul>
+        <li>
+          {{#with this}}
+            <div> Exhibit name: <b> {{name}}</b></div>
+            <div> Exhibit artist: <b>{{artist}} </b> </div>
+            <div>
+              Description:
+              <q>{{description}} </q>
+            </div>
+            <div> Audio guide: <b>{{audio_guide}}</b> </div>
+          {{/with}}
+          <br>
+        </li>
+      </ul>
+    {{/each}}
+  </div>
+{{/with}}
