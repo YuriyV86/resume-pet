@@ -1,0 +1,79 @@
+<div>
+  <main>
+    {{> title data=name big=true}}
+    <section>      
+      <p>
+        <div>Description: <q> <em>{{description}}</em> </q></div>
+        <div>History: 
+          {{#with history}}
+            <b> {{founder}}, {{year}} </b>
+          {{/with}}          
+        </div>
+        <hr>
+      </p>
+    </section>
+
+    <section>
+      <a href="#" class="link-primary">Syntax:</a>
+      {{#with syntax}}
+        <div class='container'>
+          <div class='row'>
+            {{> card title='variables' items=variables width=10}}
+            {{> card title='functions' items=functions width=10}}
+            {{> card title='conditionals' items=conditionals width=10}}
+            {{> card title='loops' items=loops width=12}}
+            {{> card title='classes' items=classes width=10}} 
+          </div>
+        </div>
+      {{/with}}
+    </section>
+
+    <section>
+      <a href="#" class="link-primary">Features:</a>
+        {{> card items=features width=75}}
+    </section>
+
+    <section>
+      {{> accordion title='Libraries' data=libraries}}
+    </section> 
+
+    <section>
+      <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Tools
+        </a>
+      </p>
+
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          {{#with tools}}
+            <ul>
+              {{#each this}}
+                <li>
+                  <span class='badge bg-success' >{{this}}</span>
+                </li>
+              {{/each}}
+            </ul>
+          {{/with}}
+        </div>
+      </div>
+    </section>
+
+    <section>
+      {{> title data='Community:' big=false}}
+      {{#with community}}
+        <ul class="list-group list-group-flush">
+          {{#each this}}
+              <li class="list-group-item">
+                <ul>
+                  <b>{{this.name}}</b> 
+                  (<a href="#" class="link-primary">{{this.type}}</a>)
+                </ul>
+              </li>
+          {{/each}}
+        </ul>
+      {{/with}}
+    </section>
+    
+  </main> 
+</div>

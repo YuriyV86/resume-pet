@@ -1,0 +1,29 @@
+<div class='col-lg'>
+  <div class='card-deck-wrapper'>
+
+    <div
+      class='card text-center'
+      style='width: {{width}}rem;'
+    >
+      <div class='card-body'>
+
+        {{#if title}}
+          <h6
+            class='card-title'
+            align='center'
+          >{{title}}</h6>
+        {{/if}}
+
+        <p class='card-text'>
+          {{#each items}}
+            <span class='badge rounded-pill text-bg-info'>
+              {{this}}
+            </span>
+          {{/each}}
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
