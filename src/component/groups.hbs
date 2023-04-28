@@ -1,0 +1,29 @@
+<div>
+  {{#with data}}
+    <ul>
+      {{#each this}}
+        <li>
+          <div>Name: <b>{{name}} </b> </div>
+          <div>Description:
+            <i><q>{{description}}</q></i></div>
+          {{#if members}}
+            <span class='badge bg-primary'>
+              <h7>Groups members</h7></span>
+            {{#with members}}
+              <ul>
+                {{#each this}}
+                  <li>
+                    <div>Name: <b>{{name}} </b> </div>
+                    <div>Gender: <b>{{gender}} </b> </div>
+                    <div>Age: <b>{{age}} </b> </div>
+                  </li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          {{/if}}
+        </li>
+        <br />
+      {{/each}}
+    </ul>
+  {{/with}}
+</div>

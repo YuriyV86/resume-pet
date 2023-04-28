@@ -1,0 +1,26 @@
+<div>
+  {{#with data}}
+    <ul>
+      {{#each this}}
+        <li>
+          <div>Name: <b>{{name}} </b> </div>
+          <div>Gender: <b>{{gender}} </b> </div>
+          <div>Age: <b>{{age}} </b> </div>
+          {{#if mutual_friends}}
+            <span class="badge bg-primary"> <h7>Mutual friends</h7></span>
+            {{> friends data=mutual_friends}}
+
+            {{#unless friends}}
+              <br> 
+            {{/unless}} 
+          {{/if}}
+
+          {{#if groups}}
+            <span class="badge bg-success"> <h7>{{name}} groups list</h7></span> 
+            {{> groups data=groups}}           
+          {{/if}}          
+        </li>
+      {{/each}}
+    </ul>
+  {{/with}}
+</div>
