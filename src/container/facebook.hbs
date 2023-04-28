@@ -1,0 +1,57 @@
+<div>
+  <main>
+    <section>
+      {{> title data=name big=true}}
+      <hr>
+    </section>
+
+    {{#with users}}
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        {{#each this}}        
+        <li class="nav-item" role="presentation">
+          <button 
+            class="nav-link" 
+            id="tab-{{id}}" 
+            data-bs-toggle="tab" 
+            data-bs-target="#tab-{{id}}-pane" 
+            type="button" 
+            role="tab" 
+            aria-controls="tab-{{id}}-pane" 
+            aria-selected="true">
+            {{name}}            
+          </button>
+        </li>
+        {{/each}}
+      </ul>
+    {{/with}}
+
+    {{#with users}}
+      <div class="tab-content" id="myTabContent">
+        {{#each this}}
+          <div 
+            class="tab-pane fade show " 
+            id="tab-{{id}}-pane" 
+            role="tabpanel" 
+            aria-labelledby="tab-{{id}}" 
+            tabindex="0">
+
+            <p>
+              <div>Gender: <b>{{gender}} </b> </div>
+              <div>Age: <b>{{age}} </b> </div>
+            </p>
+            <hr>
+
+            <span class="badge bg-success"> <h6>Friends list</h6></span>
+            {{> friends data=friends}}
+            
+            {{#if groups}}
+              <span class="badge bg-success"> <h6>Groups list</h6></span>
+              {{> groups data=groups}}
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    {{/with}}
+    
+  </main>
+</div>
