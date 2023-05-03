@@ -1,0 +1,8 @@
+<label class='form-label mb-0'>{{title}}</label>
+<div class="form-check">
+  {{#each values}}
+      <label class="form-check-label">{{this}}</label>
+      <input name="{{../name}}" type="{{../type}}" class="form-check-input" {{#if @first}}checked{{/if}}>
+    </div>
+  {{/each}}
+</div>

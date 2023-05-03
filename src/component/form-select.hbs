@@ -1,0 +1,10 @@
+<label class='form-label mb-0'>{{label}}</label>
+  <select class='form-select {{#if size}}{{size}}{{/if}}'>
+  {{#if placeholder}}
+    <option selected>{{placeholder}}</option>
+  {{/if}}
+
+  {{#each options}}
+    <option value={{this.value}}>{{this.text}}</option>
+  {{/each}}
+</select>
