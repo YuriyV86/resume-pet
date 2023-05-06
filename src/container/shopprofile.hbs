@@ -58,11 +58,9 @@
             <hr class="my-4">
           {{/with}}
 
-          {{#with itemList}}
-            {{#each this}}
-              {{> purchaseItem data=this}}
-            {{/each}}
-          {{/with}}
+          {{#each itemList}}
+            {{> purchaseItem data=this}}
+          {{/each}}
         </div>
       {{/with}}
     </div>
