@@ -1,0 +1,18 @@
+<header class="p-0">
+  <div class='card'>
+    <div class='nav'>
+      {{#with data}}
+        {{#each this}}
+          <div class='nav-item mx-1'>
+            <a
+              class='nav-link {{state}} py-1 {{#if @last}} disabled {{/if}}'
+              href={{href}}
+              target='_blank'
+            >{{text}}
+            </a>
+          </div>
+        {{/each}}
+      {{/with}}
+    </div>
+  </div>
+</header>
