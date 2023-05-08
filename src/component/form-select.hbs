@@ -1,5 +1,8 @@
-<label class='form-label mb-0'>{{label}}</label>
-  <select class='form-select {{#if size}}{{size}}{{/if}}'>
+{{#if label}}
+  <label class='form-label mb-0'>{{label}}</label>
+{{/if}}
+
+<select class='form-select {{#if size}}{{size}}{{/if}}'>
   {{#if placeholder}}
     <option selected>{{placeholder}}</option>
   {{/if}}
