@@ -1,5 +1,7 @@
 {{#each data}}
-  {{> element name=this.name descr=this.description}}
+  <div class="pt-2">
+    {{> element name=this.name descr=this.description}}
+  </div>
 
   <ul>
     {{#if this/attributes}}

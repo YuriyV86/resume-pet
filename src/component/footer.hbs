@@ -1,6 +1,6 @@
   <footer>
-      <hr>
-      <br>
+      <hr class="mt-5 mb-3">
+      {{!-- <br> --}}
       <div>
         {{#with social}}
           {{> link text=email.text href=email.href blank=true delimiter='|'}}
@@ -8,12 +8,12 @@
           {{> link text=linkedin.text href=linkedin.href blank=true}}
         {{/with}}
       </div>
-      <br>
-      <div>
+      {{!-- <br> --}}
+      <div class="mt-2">
         <em>Copyright {{firstname}} {{lastname}} 2023 </em>
       </div>
-      <br>
-      <div>
+      {{!-- <br> --}}
+      <div class="mt-2">
         <address>{{address}}</address>
       </div>
   </footer>

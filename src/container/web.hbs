@@ -1,14 +1,14 @@
 <div>
   {{#with web/languages}}
   <main>
-    <section>
+    <section class="p-0">
       <ol>
         {{#each this}}
           <li>
             
-            {{> title data=name big=true}}
+            <div class="mb-3">{{> title data=name big=true}}</div>
             <div>Version: <b> {{version}}</b></div>
-            <div>Description: <q>{{description}}</q></div>
+            <div class="mb-3">Description: <q>{{description}}</q></div>
 
             <ul>
               <li>

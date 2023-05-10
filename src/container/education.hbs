@@ -1,9 +1,10 @@
 <div>
   {{#with main}}
     <main>
-      <section>
+      <section class="py-0">
         {{>title data='My education' big=true}}
-        <ul>
+
+        <ul class="my-0">
           {{#each educations}}
             <li>
               {{name}}
@@ -15,9 +16,10 @@
         </ul>    
       </section>
 
-      <section>
+      <section class="py-0 mt-4 ps-4">
         {{>title data='My certificates' big=false}}
-        <ul>
+
+        <ul class="my-0">
           {{#each certificates}}
             <li>
               {{name}} ({{id}})

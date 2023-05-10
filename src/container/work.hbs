@@ -1,62 +1,62 @@
 <div>
   {{#with main}}
     <main>
-      <section>
+      <section class="py-0">
         {{>title data='Works history' big=true}}
         <div>
           <ul>
             {{#each works}}
-              <li>
-                <div>{{position}}</div>
-                <br>
-                <div>{{duration.from}} - 
+              <li class="pb-2">
+                <div class="mt-2">{{position}}</div>
+                {{!-- <br> --}}
+                <div class="mt-1">{{duration.from}} - 
                   {{#if duration.to}} 
                     {{duration.to}} 
                   {{else}} 
                     (досі працюємо) 
                   {{/if}} 
                 </div>
-                <br>
-                <div>
+                {{!-- <br> --}}
+                <div class="mt-2">
                   {{#if company.url}}
                     {{> link text=company.name href=company.url blank=true}} 
                   {{else}}
                     <b>{{company.name}}</b>
                   {{/if}}
                 </div>
-                <br>
-                <br>
-                <div>
+                {{!-- <br> --}}
+                {{!-- <br> --}}
+                <div class="mt-4">
                   <strong>Projects:</strong> {{projectAmount}} 
                 </div>
-                <br>
-                <ul>
+                {{!-- <br> --}}
+                <ul class="mt-2">
                   {{#each projects}}
                   <li>
                     <div>{{> link text=name href=url blank=true}} </div>
-                    <br>
-                    <div>
+                    {{!-- <br> --}}
+                    <div class="mt-0">
                       <p>{{about}} </p>
                     </div>
-                    <br>
+                    {{!-- <br> --}}
                     
-                    <div>
+                    <div class="mt-3">
                       <em>Project stacks ({{stackAmount}}):</em>
                     </div>
-                    <br>
-                    <div>
+                    {{!-- <br> --}}
+                    <div class="mt-0">
                       <ul>
                         {{#each stacks}}
                           <li>{{name}}</li>
                         {{/each}}
                       </ul>
                     </div>
-                    <br>
-                    <div>
+                    {{!-- <br> --}}
+                    <div class="mt-3">
                       <em>Project awards ({{awardAmount}}):</em>
                     </div>
-                    <br>
-                    <div>
+                    {{!-- <br> --}}
+                    <div class="mt-0">
                       <ul>
                         {{#each awards}}
                           <li>{{name}}</li>
@@ -68,7 +68,7 @@
                   {{/each}}
                 </ul>
               </li>
-              <br>
+              {{!-- <br> --}}
             {{/each}}
           </ul>  
         </div>    

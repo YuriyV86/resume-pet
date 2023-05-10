@@ -1,13 +1,13 @@
 {{#with data}}
-  <br />
+  {{!-- <br /> --}}
   {{#with venue}}
-    <div>Name: <b>{{name}} </b> </div>
+    <div class="mt-3">Name: <b>{{name}} </b> </div>
 
     {{> location data=location}}
   {{/with}}
 
-  <br />
-  <div>
+  {{!-- <br /> --}}
+  <div class="mt-3">
     {{#with performers}}
       <u> Performers:</u>
       {{#each this}}
