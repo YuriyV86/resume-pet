@@ -8,11 +8,11 @@
         <div>Date: {{date}} </div>
       </section>
 
-      <section>
-        <hr>
+      <section class="py-0">
+        <hr class="my-4">
         <ol>
           {{#each program}}
-            <li>
+            <li class="mb-4">
               {{#with this}}
                 <div>Program name: <b>{{name}}</b> </div> 
                 <div>Type: <b>{{type}} </b> </div>
@@ -24,9 +24,9 @@
                   {{> music data=details}}
                 {{/if}}
 
-                <section>
+                <section class="pt-0">
                   {{#with details/guide}}
-                    <h4>Your guide: </h4> 
+                    <h5>Your guide: </h5> 
                     <div>Name: <b>{{name}}</b> </div>
                     <div>Language: {{language}} </div>
                     <div>Rating: <u>{{rating}}</u> </div>

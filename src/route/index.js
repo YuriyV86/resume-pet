@@ -36,7 +36,112 @@ var footer = {
 // ================================================================
 
 router.get('/', function (req, res) {
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Resume-Pet | index',
+    },
+    owner: 'Vyshkvarka Yurii',
+    projectName: 'Resume-Pet',
+    projectLink: 'https://github.com/YuriyV86/resume-pet',
+    pageDescription: 'none description yet',
+    sections: {
+      beforeBootstrap: {
+        title: 'Before Bootstrap',
+        pages: [
+          {
+            text: 'Person',
+            href: '/person',
+          },
+          {
+            text: 'Biography',
+            href: '/bio',
+          },
+          {
+            text: 'Education',
+            href: '/education',
+          },
+          {
+            text: 'Program',
+            href: '/program',
+          },
+          {
+            text: 'Skills',
+            href: '/skills',
+          },
+          {
+            text: 'Summary',
+            href: '/summary',
+          },
+          {
+            text: 'Web',
+            href: '/web',
+          },
+          {
+            text: 'Work',
+            href: '/work',
+          },
+        ],
+      },
+      afterBootstrap: {
+        title: 'After Bootstrap',
+        pages: [
+          {
+            text: 'Mac',
+            href: '/mac',
+          },
+          {
+            text: 'Car',
+            href: '/car',
+          },
+          {
+            text: 'Facebook',
+            href: '/facebook',
+          },
+          {
+            text: 'JavaScript',
+            href: '/js',
+          },
+          {
+            text: 'Task21',
+            href: '/task21',
+          },
+          {
+            text: 'Task22',
+            href: '/task22',
+          },
+          {
+            text: 'Task31',
+            href: '/task31',
+          },
+          {
+            text: 'Shopcart',
+            href: '/shopcart',
+          },
+          {
+            text: 'Shopcatalog',
+            href: '/shopcatalog',
+          },
+          {
+            text: 'Shophome',
+            href: '/shophome',
+          },
+          {
+            text: 'Shoporder',
+            href: '/shoporder',
+          },
+          {
+            text: 'Shopprofile',
+            href: '/shopprofile',
+          },
+          {
+            text: 'Shopreview',
+            href: '/shopreview',
+          },
+        ],
+      },
+    },
+  })
 })
 
 router.get('/summary', function (req, res) {
@@ -2309,9 +2414,6 @@ router.get('/shopcart', function (req, res) {
 })
 
 router.get('/shopprofile', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     layout: 'shop',
     navigation: {

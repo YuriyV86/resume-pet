@@ -1,17 +1,17 @@
 <div>
   {{#with main}}
     <main>
-      <section>
+      <section class="py-0">
         {{>title data=summary.title big=true}}
-        <div>
+        <div class="ps-3">
           <p>{{summary.text}}</p>
         </div>
       </section>
 
       {{#with experience}}
-        <section>
+        <section class="py-0">
           {{>title data=title big=false}}
-          <div>
+          <div class="ps-3">
             <p>{{text}}</p>
           </div>
         </section>
