@@ -59,3 +59,6 @@ typings/
 .next
 
 package-lock.json
+
+# VSCode temp files
+.vs/
